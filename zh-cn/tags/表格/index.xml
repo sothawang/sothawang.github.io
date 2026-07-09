@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>表格 on 我的 Hugo 站点</title>
+		<link>https://example.org/zh-cn/tags/%E8%A1%A8%E6%A0%BC/</link>
+		<description>Recent content in 表格 on 我的 Hugo 站点</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 26 Sep 2025 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://example.org/zh-cn/tags/%E8%A1%A8%E6%A0%BC/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>表格测试</title>
+				<link>https://example.org/zh-cn/posts/table-test/</link>
+				<pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
+				<guid>https://example.org/zh-cn/posts/table-test/</guid>
+				<description>&lt;table class=&#34;striped&#34; data-test=&#34;t1&#34; id=&#34;demo-table&#34;&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: left&#34;&gt;左对齐&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: center&#34;&gt;居中&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: right&#34;&gt;右对齐&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;a&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;b&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: right&#34;&gt;c&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;代码&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;斜体&lt;/em&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: right&#34;&gt;&lt;strong&gt;粗体&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+			</item>
+	</channel>
+</rss>

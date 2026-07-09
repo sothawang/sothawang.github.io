@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>标签 on 我的 Hugo 站点</title>
+		<link>https://example.org/zh-cn/tags/%E6%A0%87%E7%AD%BE/</link>
+		<description>Recent content in 标签 on 我的 Hugo 站点</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 14 Sep 2025 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://example.org/zh-cn/tags/%E6%A0%87%E7%AD%BE/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>归档与标签</title>
+				<link>https://example.org/zh-cn/posts/archive-and-tags/</link>
+				<pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate>
+				<guid>https://example.org/zh-cn/posts/archive-and-tags/</guid>
+				<description>&lt;h2 id=&#34;归档&#34;&gt;&#xA;  归档&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;通过归档页按时间查看历史文章；首页展示最新文章列表。&lt;/p&gt;&#xA;&lt;h2 id=&#34;标签&#34;&gt;&#xA;  标签&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;本文打上了 &lt;code&gt;归档&lt;/code&gt; 和 &lt;code&gt;标签&lt;/code&gt;，可从菜单进入标签页查看。&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
