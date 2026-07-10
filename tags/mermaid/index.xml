@@ -25,7 +25,7 @@
 &lt;h2 id="writing"&gt;
  Writing
 &lt;/h2&gt;
-&lt;p&gt;Regular Markdown works as expected. &lt;strong&gt;Bold text&lt;/strong&gt; stands out in gold under retro mode, and &lt;em&gt;italic text&lt;/em&gt; stays readable. You can link to &lt;a href="https://example.org/"&gt;any page&lt;/a&gt; and the style adapts per theme.&lt;/p&gt;</description></item><item><title>Mermaid and Math Demo</title><link>https://example.org/posts/mermaid-and-math/</link><pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/mermaid-and-math/</guid><description>&lt;h2 id="mermaid"&gt;
+&lt;p&gt;Regular Markdown works as expected. &lt;strong&gt;Bold text&lt;/strong&gt; stands out in gold under retro mode, and &lt;em&gt;italic text&lt;/em&gt; stays readable. You can link to &lt;a href=""&gt;any page&lt;/a&gt; and the style adapts per theme.&lt;/p&gt;</description></item><item><title>Mermaid and Math Demo</title><link>https://example.org/posts/mermaid-and-math/</link><pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/mermaid-and-math/</guid><description>&lt;h2 id="mermaid"&gt;
  Mermaid
 &lt;/h2&gt;
 &lt;pre class="mermaid"&gt;

@@ -25,7 +25,7 @@
 &lt;h2 id="writing"&gt;
  Writing
 &lt;/h2&gt;
-&lt;p&gt;Regular Markdown works as expected. &lt;strong&gt;Bold text&lt;/strong&gt; stands out in gold under retro mode, and &lt;em&gt;italic text&lt;/em&gt; stays readable. You can link to &lt;a href="https://example.org/"&gt;any page&lt;/a&gt; and the style adapts per theme.&lt;/p&gt;</description></item><item><title>Code Samples</title><link>https://example.org/posts/code-samples/</link><pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/code-samples/</guid><description>&lt;h2 id="javascript"&gt;
+&lt;p&gt;Regular Markdown works as expected. &lt;strong&gt;Bold text&lt;/strong&gt; stands out in gold under retro mode, and &lt;em&gt;italic text&lt;/em&gt; stays readable. You can link to &lt;a href=""&gt;any page&lt;/a&gt; and the style adapts per theme.&lt;/p&gt;</description></item><item><title>Code Samples</title><link>https://example.org/posts/code-samples/</link><pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/code-samples/</guid><description>&lt;h2 id="javascript"&gt;
  JavaScript
 &lt;/h2&gt;
 &lt;div class="codeblock"&gt;
