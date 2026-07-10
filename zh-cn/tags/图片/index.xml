@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>图片 on 我的 Hugo 站点</title><link>https://example.org/zh-cn/tags/%E5%9B%BE%E7%89%87/</link><description>Recent content in 图片 on 我的 Hugo 站点</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Thu, 31 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/zh-cn/tags/%E5%9B%BE%E7%89%87/index.xml" rel="self" type="application/rss+xml"/><item><title>图片与灯箱</title><link>https://example.org/zh-cn/posts/images-and-lightbox/</link><pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate><guid>https://example.org/zh-cn/posts/images-and-lightbox/</guid><description>&lt;h2 id="外链图片"&gt;
+ 外链图片
+&lt;/h2&gt;
+&lt;p&gt;点击图片可在灯箱中查看大图：&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;a href="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;amp;fit=crop&amp;amp;w=1400&amp;amp;q=60" class="lightbox-image"&gt;
+ &lt;img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;amp;fit=crop&amp;amp;w=1400&amp;amp;q=60" alt="雪山湖泊" title="打开原图" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;figcaption&gt;打开原图&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;/p&gt;
+&lt;h2 id="本地图片说明"&gt;
+ 本地图片说明
+&lt;/h2&gt;
+&lt;p&gt;若使用页面资源包（Page Bundle），请将图片与 &lt;code&gt;index.md&lt;/code&gt; 放在同一目录，仅使用文件名引用以自动获取尺寸。&lt;/p&gt;</description></item></channel></rss>

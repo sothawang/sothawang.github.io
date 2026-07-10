@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Photoswipe on My New Hugo Site</title><link>https://example.org/tags/photoswipe/</link><description>Recent content in Photoswipe on My New Hugo Site</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 12 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/photoswipe/index.xml" rel="self" type="application/rss+xml"/><item><title>Images and Lightbox</title><link>https://example.org/posts/images-and-lightbox/</link><pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/images-and-lightbox/</guid><description>&lt;h2 id="external-image"&gt;
+ External image
+&lt;/h2&gt;
+&lt;p&gt;Click the image to open in a lightbox.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;a href="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;amp;fit=crop&amp;amp;w=1400&amp;amp;q=60" class="lightbox-image"&gt;
+ &lt;img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;amp;fit=crop&amp;amp;w=1400&amp;amp;q=60" alt="Mountain lake" title="Open full size" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;figcaption&gt;Open full size&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;/p&gt;
+&lt;h2 id="local-image-note"&gt;
+ Local image note
+&lt;/h2&gt;
+&lt;p&gt;For page bundles, put images beside &lt;code&gt;index.md&lt;/code&gt; and reference by filename only to get dimensions.&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Math on My New Hugo Site</title><link>https://example.org/tags/math/</link><description>Recent content in Math on My New Hugo Site</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/math/index.xml" rel="self" type="application/rss+xml"/><item><title>Theme Guide</title><link>https://example.org/posts/quick-start/</link><pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/quick-start/</guid><description>&lt;p&gt;This post walks through what &lt;strong&gt;hugo-trainsh&lt;/strong&gt; can render — headings, code, tables, diagrams, math, images, and more.&lt;/p&gt;
+&lt;div class="toc"&gt;
+ &lt;ul&gt;&lt;li&gt;
+ &lt;a href="#three-theme-modes"&gt;Three Theme Modes&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#writing"&gt;Writing&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#code"&gt;Code&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#tables"&gt;Tables&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#diagrams"&gt;Diagrams&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#math"&gt;Math&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#images"&gt;Images&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#tags"&gt;Tags&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+
+
+
+&lt;h2 id="three-theme-modes"&gt;
+ Three Theme Modes
+&lt;/h2&gt;
+&lt;p&gt;Click the toggle in the header to cycle through:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Retro&lt;/strong&gt; (gamepad) — NES deep-blue background, pixel font headings, 8-bit dialog borders&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Light&lt;/strong&gt; (sun) — clean, modern light palette&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dark&lt;/strong&gt; (moon) — comfortable for night reading&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="writing"&gt;
+ Writing
+&lt;/h2&gt;
+&lt;p&gt;Regular Markdown works as expected. &lt;strong&gt;Bold text&lt;/strong&gt; stands out in gold under retro mode, and &lt;em&gt;italic text&lt;/em&gt; stays readable. You can link to &lt;a href="https://example.org/"&gt;any page&lt;/a&gt; and the style adapts per theme.&lt;/p&gt;</description></item><item><title>Mermaid and Math Demo</title><link>https://example.org/posts/mermaid-and-math/</link><pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/mermaid-and-math/</guid><description>&lt;h2 id="mermaid"&gt;
+ Mermaid
+&lt;/h2&gt;
+&lt;pre class="mermaid"&gt;
+ sequenceDiagram
+ participant U as User
+ participant H as Hugo
+ participant T as Theme runtime
+ U-&amp;gt;&amp;gt;H: Save content
+ H-&amp;gt;&amp;gt;T: Render with templates
+ T--&amp;gt;&amp;gt;U: Live reload
+&lt;/pre&gt;
+
+&lt;h2 id="math"&gt;
+ Math
+&lt;/h2&gt;
+&lt;p&gt;Inline math: $a^2 + b^2 = c^2$.&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;span class="katex-display"&gt;&lt;span class="katex"&gt;&lt;span class="katex-mathml"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msubsup&gt;&lt;mo&gt;∫&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;∞&lt;/mi&gt;&lt;/mrow&gt;&lt;mi mathvariant="normal"&gt;∞&lt;/mi&gt;&lt;/msubsup&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mtext&gt; &lt;/mtext&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msqrt&gt;&lt;mi&gt;π&lt;/mi&gt;&lt;/msqrt&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class="katex-html" aria-hidden="true"&gt;&lt;span class="base"&gt;&lt;span class="strut" style="height:2.3846em;vertical-align:-0.9703em;"&gt;&lt;/span&gt;&lt;span class="mop"&gt;&lt;span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;"&gt;∫&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t vlist-t2"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:1.4143em;"&gt;&lt;span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;−&lt;/span&gt;&lt;span class="mord mtight"&gt;∞&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="top:-3.8129em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;∞&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-s"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.9703em;"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.1667em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span class="mord mathnormal"&gt;e&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:1.0369em;"&gt;&lt;span style="top:-3.113em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;−&lt;/span&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mathnormal mtight"&gt;x&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.8913em;"&gt;&lt;span style="top:-2.931em;margin-right:0.0714em;"&gt;&lt;span class="pstrut" style="height:2.5em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size3 size1 mtight"&gt;&lt;span class="mord mtight"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.1667em;"&gt;&lt;/span&gt;&lt;span class="mord mathnormal"&gt;d&lt;/span&gt;&lt;span class="mord mathnormal"&gt;x&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.2778em;"&gt;&lt;/span&gt;&lt;span class="mrel"&gt;=&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.2778em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="base"&gt;&lt;span class="strut" style="height:1.04em;vertical-align:-0.1908em;"&gt;&lt;/span&gt;&lt;span class="mord sqrt"&gt;&lt;span class="vlist-t vlist-t2"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.8492em;"&gt;&lt;span class="svg-align" style="top:-3em;"&gt;&lt;span class="pstrut" style="height:3em;"&gt;&lt;/span&gt;&lt;span class="mord" style="padding-left:0.833em;"&gt;&lt;span class="mord mathnormal" style="margin-right:0.03588em;"&gt;π&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="top:-2.8092em;"&gt;&lt;span class="pstrut" style="height:3em;"&gt;&lt;/span&gt;&lt;span class="hide-tail" style="min-width:0.853em;height:1.08em;"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"&gt;&lt;path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-s"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.1908em;"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;</description></item></channel></rss>

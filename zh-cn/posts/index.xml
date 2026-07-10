@@ -1,1 +1,252 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>文章 on 我的 Hugo 站点</title><link>https://example.org/zh-cn/posts/</link><description>Recent content in 文章 on 我的 Hugo 站点</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate/><atom:link href="https://example.org/zh-cn/posts/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>文章 on 我的 Hugo 站点</title><link>https://example.org/zh-cn/posts/</link><description>Recent content in 文章 on 我的 Hugo 站点</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 26 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/zh-cn/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>表格测试</title><link>https://example.org/zh-cn/posts/table-test/</link><pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate><guid>https://example.org/zh-cn/posts/table-test/</guid><description>&lt;table class="striped" data-test="t1" id="demo-table"&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style="text-align: left"&gt;左对齐&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;居中&lt;/th&gt;
+					&lt;th style="text-align: right"&gt;右对齐&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: left"&gt;a&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;b&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;c&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: left"&gt;&lt;code&gt;代码&lt;/code&gt;&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;&lt;em&gt;斜体&lt;/em&gt;&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;&lt;strong&gt;粗体&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>主题指南</title><link>https://example.org/zh-cn/posts/quick-start/</link><pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate><guid>https://example.org/zh-cn/posts/quick-start/</guid><description>&lt;p&gt;这篇文章展示 &lt;strong&gt;hugo-trainsh&lt;/strong&gt; 的主要渲染能力——标题、代码、表格、图表、公式、图片等。&lt;/p&gt;
+&lt;div class="toc"&gt;
+ &lt;ul&gt;&lt;li&gt;
+ &lt;a href="#%e4%b8%89%e7%a7%8d%e4%b8%bb%e9%a2%98%e6%a8%a1%e5%bc%8f"&gt;三种主题模式&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#%e6%96%87%e5%ad%97%e6%8e%92%e7%89%88"&gt;文字排版&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#%e4%bb%a3%e7%a0%81"&gt;代码&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#%e8%a1%a8%e6%a0%bc"&gt;表格&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#%e5%9b%be%e8%a1%a8"&gt;图表&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#%e6%95%b0%e5%ad%a6%e5%85%ac%e5%bc%8f"&gt;数学公式&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#%e5%9b%be%e7%89%87"&gt;图片&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#%e6%a0%87%e7%ad%be"&gt;标签&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+
+
+
+&lt;h2 id="三种主题模式"&gt;
+ 三种主题模式
+&lt;/h2&gt;
+&lt;p&gt;点击页头的切换按钮依次切换：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;复古&lt;/strong&gt; (手柄) — NES 深蓝底色、像素字体标题、8-bit 对话框边框&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;明亮&lt;/strong&gt; (太阳) — 干净的现代浅色方案&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;暗黑&lt;/strong&gt; (月亮) — 适合夜间阅读&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="文字排版"&gt;
+ 文字排版
+&lt;/h2&gt;
+&lt;p&gt;常规 Markdown 正常渲染。&lt;strong&gt;粗体&lt;/strong&gt;在复古模式下以金色高亮，&lt;em&gt;斜体&lt;/em&gt;同样清晰可读。可以添加&lt;a href="https://example.org/zh-cn/"&gt;任意链接&lt;/a&gt;，样式会跟随主题变化。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;引用块在复古模式下有独立的青色边框，在长文中一眼可辨。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="代码"&gt;
+ 代码
+&lt;/h2&gt;
+&lt;p&gt;围栏代码块支持语法高亮、复制按钮和自动换行：&lt;/p&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="开启自动换行"
+ data-wrap-title="开启自动换行"
+ data-nowrap-title="关闭自动换行"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="复制代码"
+ data-copied-title="已复制"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;date&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;你好, &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;！今天是 &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;。&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;世界&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;行内代码如 &lt;code&gt;hugo server&lt;/code&gt; 也有对应样式。&lt;/p&gt;</description></item><item><title>归档与标签</title><link>https://example.org/zh-cn/posts/archive-and-tags/</link><pubDate>Sun, 14 Sep 2025 00:00:00 +0000</pubDate><guid>https://example.org/zh-cn/posts/archive-and-tags/</guid><description>&lt;h2 id="归档"&gt;
+ 归档
+&lt;/h2&gt;
+&lt;p&gt;通过归档页按时间查看历史文章；首页展示最新文章列表。&lt;/p&gt;
+&lt;h2 id="标签"&gt;
+ 标签
+&lt;/h2&gt;
+&lt;p&gt;本文打上了 &lt;code&gt;归档&lt;/code&gt; 和 &lt;code&gt;标签&lt;/code&gt;，可从菜单进入标签页查看。&lt;/p&gt;</description></item><item><title>代码示例</title><link>https://example.org/zh-cn/posts/code-samples/</link><pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate><guid>https://example.org/zh-cn/posts/code-samples/</guid><description>&lt;h2 id="javascript"&gt;
+ JavaScript
+&lt;/h2&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="开启自动换行"
+ data-wrap-title="开启自动换行"
+ data-nowrap-title="关闭自动换行"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="复制代码"
+ data-copied-title="已复制"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;hasFeature&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;短代码&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Mermaid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;KaTeX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;PhotoSwipe&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;i18n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;includes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;hasFeature&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;短代码&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id="python"&gt;
+ Python
+&lt;/h2&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="开启自动换行"
+ data-wrap-title="开启自动换行"
+ data-nowrap-title="关闭自动换行"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="复制代码"
+ data-copied-title="已复制"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;dataclasses&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;dataclass&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;date&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nd"&gt;@dataclass&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;DemoFeature&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;enabled&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;features&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;代码块增强&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;搜索&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;标签筛选&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;点赞&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;多语言&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;DemoFeature&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;feature&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;enabled&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;feature&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isoformat&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;total=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title>图表与公式演示</title><link>https://example.org/zh-cn/posts/mermaid-and-math/</link><pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate><guid>https://example.org/zh-cn/posts/mermaid-and-math/</guid><description>&lt;h2 id="时序图"&gt;
+ 时序图
+&lt;/h2&gt;
+&lt;pre class="mermaid"&gt;
+ sequenceDiagram
+ participant 用户
+ participant Hugo
+ participant 主题 as 主题运行时
+ 用户-&amp;gt;&amp;gt;Hugo: 保存内容
+ Hugo-&amp;gt;&amp;gt;主题: 模板渲染
+ 主题--&amp;gt;&amp;gt;用户: 实时刷新
+&lt;/pre&gt;
+
+&lt;h2 id="公式"&gt;
+ 公式
+&lt;/h2&gt;
+&lt;p&gt;行内公式：$\alpha + \beta = \gamma$。&lt;/p&gt;
+&lt;p&gt;块级公式：&lt;/p&gt;
+&lt;span class="katex-display"&gt;&lt;span class="katex"&gt;&lt;span class="katex-mathml"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;munderover&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/munderover&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy="false"&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy="false"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;\sum_{i=1}^{n} i = \frac{n(n+1)}{2}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class="katex-html" aria-hidden="true"&gt;&lt;span class="base"&gt;&lt;span class="strut" style="height:2.9291em;vertical-align:-1.2777em;"&gt;&lt;/span&gt;&lt;span class="mop op-limits"&gt;&lt;span class="vlist-t vlist-t2"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:1.6514em;"&gt;&lt;span style="top:-1.8723em;margin-left:0em;"&gt;&lt;span class="pstrut" style="height:3.05em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mathnormal mtight"&gt;i&lt;/span&gt;&lt;span class="mrel mtight"&gt;=&lt;/span&gt;&lt;span class="mord mtight"&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="top:-3.05em;"&gt;&lt;span class="pstrut" style="height:3.05em;"&gt;&lt;/span&gt;&lt;span&gt;&lt;span class="mop op-symbol large-op"&gt;∑&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="top:-4.3em;margin-left:0em;"&gt;&lt;span class="pstrut" style="height:3.05em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mathnormal mtight"&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-s"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:1.2777em;"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.1667em;"&gt;&lt;/span&gt;&lt;span class="mord mathnormal"&gt;i&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.2778em;"&gt;&lt;/span&gt;&lt;span class="mrel"&gt;=&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.2778em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="base"&gt;&lt;span class="strut" style="height:2.113em;vertical-align:-0.686em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span class="mopen nulldelimiter"&gt;&lt;/span&gt;&lt;span class="mfrac"&gt;&lt;span class="vlist-t vlist-t2"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:1.427em;"&gt;&lt;span style="top:-2.314em;"&gt;&lt;span class="pstrut" style="height:3em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span class="mord"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="top:-3.23em;"&gt;&lt;span class="pstrut" style="height:3em;"&gt;&lt;/span&gt;&lt;span class="frac-line" style="border-bottom-width:0.04em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="top:-3.677em;"&gt;&lt;span class="pstrut" style="height:3em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span class="mord mathnormal"&gt;n&lt;/span&gt;&lt;span class="mopen"&gt;(&lt;/span&gt;&lt;span class="mord mathnormal"&gt;n&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.2222em;"&gt;&lt;/span&gt;&lt;span class="mbin"&gt;+&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.2222em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;1&lt;/span&gt;&lt;span class="mclose"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-s"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.686em;"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mclose nulldelimiter"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;</description></item><item><title>工程原则 2024</title><link>https://example.org/zh-cn/posts/engineering-principles/</link><pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate><guid>https://example.org/zh-cn/posts/engineering-principles/</guid><description>&lt;h2 id="原则"&gt;
+ 原则
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;小步快跑，频繁发布。&lt;/li&gt;
+&lt;li&gt;关键路径优先使用成熟技术。&lt;/li&gt;
+&lt;li&gt;测试即文档，保持可读性。&lt;/li&gt;
+&lt;li&gt;添加功能前先确保可回滚。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="说明"&gt;
+ 说明
+&lt;/h2&gt;
+&lt;p&gt;这些原则刻意保持简洁，便于记忆和讨论。&lt;/p&gt;</description></item><item><title>图片与灯箱</title><link>https://example.org/zh-cn/posts/images-and-lightbox/</link><pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate><guid>https://example.org/zh-cn/posts/images-and-lightbox/</guid><description>&lt;h2 id="外链图片"&gt;
+ 外链图片
+&lt;/h2&gt;
+&lt;p&gt;点击图片可在灯箱中查看大图：&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;a href="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;amp;fit=crop&amp;amp;w=1400&amp;amp;q=60" class="lightbox-image"&gt;
+ &lt;img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;amp;fit=crop&amp;amp;w=1400&amp;amp;q=60" alt="雪山湖泊" title="打开原图" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;figcaption&gt;打开原图&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;/p&gt;
+&lt;h2 id="本地图片说明"&gt;
+ 本地图片说明
+&lt;/h2&gt;
+&lt;p&gt;若使用页面资源包（Page Bundle），请将图片与 &lt;code&gt;index.md&lt;/code&gt; 放在同一目录，仅使用文件名引用以自动获取尺寸。&lt;/p&gt;</description></item><item><title>功能演示手册</title><link>https://example.org/zh-cn/posts/product-walkthrough/</link><pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate><guid>https://example.org/zh-cn/posts/product-walkthrough/</guid><description>&lt;h2 id="这篇文章为什么更新"&gt;
+ 这篇文章为什么更新
+&lt;/h2&gt;
+&lt;p&gt;这篇 demo 文章改为用于核对最新版本主题特性，帮助你快速确认站点更新是否完整生效。&lt;/p&gt;
+&lt;h2 id="验证流程"&gt;
+ 验证流程
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;语言切换器能正常跳转到对应语言的同类页面。&lt;/li&gt;
+&lt;li&gt;列表页支持搜索与标签筛选。&lt;/li&gt;
+&lt;li&gt;文章内容中的短代码（&lt;code&gt;toc&lt;/code&gt;、&lt;code&gt;tags&lt;/code&gt;、&lt;code&gt;recent-posts&lt;/code&gt;）正常渲染。&lt;/li&gt;
+&lt;li&gt;代码块、Mermaid、KaTeX、PhotoSwipe 都可以正常使用。&lt;/li&gt;
+&lt;li&gt;主题切换按钮三态循环正常：明亮（太阳）→ 暗黑（月亮）→ 复古（手柄）→ 明亮。复古模式应显示 NES 像素风格（深蓝背景、像素字体标题）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="建议配置"&gt;
+ 建议配置
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;params.mainSections&lt;/code&gt; 需要包含实际发文目录（示例为 &lt;code&gt;posts&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;outputs.home&lt;/code&gt; 开启 &lt;code&gt;JSON&lt;/code&gt; 才可使用客户端搜索索引。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="备注"&gt;
+ 备注
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;多语言同义内容可通过 &lt;code&gt;translationKey&lt;/code&gt; 做一一对应。&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

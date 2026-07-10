@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on 我的 Hugo 站点</title><link>https://example.org/zh-cn/tags/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on 我的 Hugo 站点</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Thu, 18 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/zh-cn/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>功能演示手册</title><link>https://example.org/zh-cn/posts/product-walkthrough/</link><pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate><guid>https://example.org/zh-cn/posts/product-walkthrough/</guid><description>&lt;h2 id="这篇文章为什么更新"&gt;
+ 这篇文章为什么更新
+&lt;/h2&gt;
+&lt;p&gt;这篇 demo 文章改为用于核对最新版本主题特性，帮助你快速确认站点更新是否完整生效。&lt;/p&gt;
+&lt;h2 id="验证流程"&gt;
+ 验证流程
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;语言切换器能正常跳转到对应语言的同类页面。&lt;/li&gt;
+&lt;li&gt;列表页支持搜索与标签筛选。&lt;/li&gt;
+&lt;li&gt;文章内容中的短代码（&lt;code&gt;toc&lt;/code&gt;、&lt;code&gt;tags&lt;/code&gt;、&lt;code&gt;recent-posts&lt;/code&gt;）正常渲染。&lt;/li&gt;
+&lt;li&gt;代码块、Mermaid、KaTeX、PhotoSwipe 都可以正常使用。&lt;/li&gt;
+&lt;li&gt;主题切换按钮三态循环正常：明亮（太阳）→ 暗黑（月亮）→ 复古（手柄）→ 明亮。复古模式应显示 NES 像素风格（深蓝背景、像素字体标题）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="建议配置"&gt;
+ 建议配置
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;params.mainSections&lt;/code&gt; 需要包含实际发文目录（示例为 &lt;code&gt;posts&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;outputs.home&lt;/code&gt; 开启 &lt;code&gt;JSON&lt;/code&gt; 才可使用客户端搜索索引。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="备注"&gt;
+ 备注
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;多语言同义内容可通过 &lt;code&gt;translationKey&lt;/code&gt; 做一一对应。&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

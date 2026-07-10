@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Archive on My New Hugo Site</title><link>https://example.org/tags/archive/</link><description>Recent content in Archive on My New Hugo Site</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 28 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/archive/index.xml" rel="self" type="application/rss+xml"/><item><title>Archive and Tags</title><link>https://example.org/posts/archive-and-tags/</link><pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/archive-and-tags/</guid><description>&lt;h2 id="archive"&gt;
+ Archive
+&lt;/h2&gt;
+&lt;p&gt;Use the archive page to browse by date. Recent posts appear on the home page.&lt;/p&gt;
+&lt;h2 id="tags"&gt;
+ Tags
+&lt;/h2&gt;
+&lt;p&gt;This post is tagged with &lt;code&gt;archive&lt;/code&gt; and &lt;code&gt;tags&lt;/code&gt;. Explore tag pages from the menu.&lt;/p&gt;</description></item></channel></rss>

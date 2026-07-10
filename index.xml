@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on My New Hugo Site</title><link>https://example.org/</link><description>Recent content in Home on My New Hugo Site</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Theme Guide</title><link>https://example.org/posts/quick-start/</link><pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/quick-start/</guid><description>&lt;p&gt;This post walks through what &lt;strong&gt;hugo-trainsh&lt;/strong&gt; can render — headings, code, tables, diagrams, math, images, and more.&lt;/p&gt;
+&lt;div class="toc"&gt;
+ &lt;ul&gt;&lt;li&gt;
+ &lt;a href="#three-theme-modes"&gt;Three Theme Modes&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#writing"&gt;Writing&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#code"&gt;Code&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#tables"&gt;Tables&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#diagrams"&gt;Diagrams&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#math"&gt;Math&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#images"&gt;Images&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+ &lt;a href="#tags"&gt;Tags&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+
+
+
+&lt;h2 id="three-theme-modes"&gt;
+ Three Theme Modes
+&lt;/h2&gt;
+&lt;p&gt;Click the toggle in the header to cycle through:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Retro&lt;/strong&gt; (gamepad) — NES deep-blue background, pixel font headings, 8-bit dialog borders&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Light&lt;/strong&gt; (sun) — clean, modern light palette&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dark&lt;/strong&gt; (moon) — comfortable for night reading&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="writing"&gt;
+ Writing
+&lt;/h2&gt;
+&lt;p&gt;Regular Markdown works as expected. &lt;strong&gt;Bold text&lt;/strong&gt; stands out in gold under retro mode, and &lt;em&gt;italic text&lt;/em&gt; stays readable. You can link to &lt;a href="https://example.org/"&gt;any page&lt;/a&gt; and the style adapts per theme.&lt;/p&gt;</description></item><item><title>Code Samples</title><link>https://example.org/posts/code-samples/</link><pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/code-samples/</guid><description>&lt;h2 id="javascript"&gt;
+ JavaScript
+&lt;/h2&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;hasFeature&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;shortcodes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;mermaid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;math&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lightbox&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;i18n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;includes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;hasFeature&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;shortcodes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id="python"&gt;
+ Python
+&lt;/h2&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;dataclasses&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;dataclass&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;date&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nd"&gt;@dataclass&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;DemoFeature&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;enabled&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;features&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;codeblock-enhanced&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;search&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;tag-filter&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;i18n&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;DemoFeature&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;feature&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;enabled&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;feature&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isoformat&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;total=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title>Images and Lightbox</title><link>https://example.org/posts/images-and-lightbox/</link><pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/images-and-lightbox/</guid><description>&lt;h2 id="external-image"&gt;
+ External image
+&lt;/h2&gt;
+&lt;p&gt;Click the image to open in a lightbox.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;a href="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;amp;fit=crop&amp;amp;w=1400&amp;amp;q=60" class="lightbox-image"&gt;
+ &lt;img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;amp;fit=crop&amp;amp;w=1400&amp;amp;q=60" alt="Mountain lake" title="Open full size" loading="lazy"&gt;
+&lt;/a&gt;
+&lt;figcaption&gt;Open full size&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;/p&gt;
+&lt;h2 id="local-image-note"&gt;
+ Local image note
+&lt;/h2&gt;
+&lt;p&gt;For page bundles, put images beside &lt;code&gt;index.md&lt;/code&gt; and reference by filename only to get dimensions.&lt;/p&gt;</description></item><item><title>Mermaid and Math Demo</title><link>https://example.org/posts/mermaid-and-math/</link><pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/mermaid-and-math/</guid><description>&lt;h2 id="mermaid"&gt;
+ Mermaid
+&lt;/h2&gt;
+&lt;pre class="mermaid"&gt;
+ sequenceDiagram
+ participant U as User
+ participant H as Hugo
+ participant T as Theme runtime
+ U-&amp;gt;&amp;gt;H: Save content
+ H-&amp;gt;&amp;gt;T: Render with templates
+ T--&amp;gt;&amp;gt;U: Live reload
+&lt;/pre&gt;
+
+&lt;h2 id="math"&gt;
+ Math
+&lt;/h2&gt;
+&lt;p&gt;Inline math: $a^2 + b^2 = c^2$.&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;span class="katex-display"&gt;&lt;span class="katex"&gt;&lt;span class="katex-mathml"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msubsup&gt;&lt;mo&gt;∫&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;∞&lt;/mi&gt;&lt;/mrow&gt;&lt;mi mathvariant="normal"&gt;∞&lt;/mi&gt;&lt;/msubsup&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mtext&gt; &lt;/mtext&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msqrt&gt;&lt;mi&gt;π&lt;/mi&gt;&lt;/msqrt&gt;&lt;/mrow&gt;&lt;annotation encoding="application/x-tex"&gt;\int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class="katex-html" aria-hidden="true"&gt;&lt;span class="base"&gt;&lt;span class="strut" style="height:2.3846em;vertical-align:-0.9703em;"&gt;&lt;/span&gt;&lt;span class="mop"&gt;&lt;span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;"&gt;∫&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t vlist-t2"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:1.4143em;"&gt;&lt;span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;−&lt;/span&gt;&lt;span class="mord mtight"&gt;∞&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="top:-3.8129em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;∞&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-s"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.9703em;"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.1667em;"&gt;&lt;/span&gt;&lt;span class="mord"&gt;&lt;span class="mord mathnormal"&gt;e&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:1.0369em;"&gt;&lt;span style="top:-3.113em;margin-right:0.05em;"&gt;&lt;span class="pstrut" style="height:2.7em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size6 size3 mtight"&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mtight"&gt;−&lt;/span&gt;&lt;span class="mord mtight"&gt;&lt;span class="mord mathnormal mtight"&gt;x&lt;/span&gt;&lt;span class="msupsub"&gt;&lt;span class="vlist-t"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.8913em;"&gt;&lt;span style="top:-2.931em;margin-right:0.0714em;"&gt;&lt;span class="pstrut" style="height:2.5em;"&gt;&lt;/span&gt;&lt;span class="sizing reset-size3 size1 mtight"&gt;&lt;span class="mord mtight"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.1667em;"&gt;&lt;/span&gt;&lt;span class="mord mathnormal"&gt;d&lt;/span&gt;&lt;span class="mord mathnormal"&gt;x&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.2778em;"&gt;&lt;/span&gt;&lt;span class="mrel"&gt;=&lt;/span&gt;&lt;span class="mspace" style="margin-right:0.2778em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="base"&gt;&lt;span class="strut" style="height:1.04em;vertical-align:-0.1908em;"&gt;&lt;/span&gt;&lt;span class="mord sqrt"&gt;&lt;span class="vlist-t vlist-t2"&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.8492em;"&gt;&lt;span class="svg-align" style="top:-3em;"&gt;&lt;span class="pstrut" style="height:3em;"&gt;&lt;/span&gt;&lt;span class="mord" style="padding-left:0.833em;"&gt;&lt;span class="mord mathnormal" style="margin-right:0.03588em;"&gt;π&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="top:-2.8092em;"&gt;&lt;span class="pstrut" style="height:3em;"&gt;&lt;/span&gt;&lt;span class="hide-tail" style="min-width:0.853em;height:1.08em;"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"&gt;&lt;path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-s"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.1908em;"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;</description></item><item><title>Archive and Tags</title><link>https://example.org/posts/archive-and-tags/</link><pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/archive-and-tags/</guid><description>&lt;h2 id="archive"&gt;
+ Archive
+&lt;/h2&gt;
+&lt;p&gt;Use the archive page to browse by date. Recent posts appear on the home page.&lt;/p&gt;
+&lt;h2 id="tags"&gt;
+ Tags
+&lt;/h2&gt;
+&lt;p&gt;This post is tagged with &lt;code&gt;archive&lt;/code&gt; and &lt;code&gt;tags&lt;/code&gt;. Explore tag pages from the menu.&lt;/p&gt;</description></item><item><title>Table Test</title><link>https://example.org/posts/table-test/</link><pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/table-test/</guid><description>&lt;table class="striped" data-test="t1" id="demo-table"&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style="text-align: left"&gt;Left&lt;/th&gt;
+					&lt;th style="text-align: center"&gt;Center&lt;/th&gt;
+					&lt;th style="text-align: right"&gt;Right&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: left"&gt;a&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;b&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;c&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style="text-align: left"&gt;&lt;code&gt;code&lt;/code&gt;&lt;/td&gt;
+					&lt;td style="text-align: center"&gt;&lt;em&gt;em&lt;/em&gt;&lt;/td&gt;
+					&lt;td style="text-align: right"&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>Engineering Principles 2024</title><link>https://example.org/posts/engineering-principles/</link><pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate><guid>https://example.org/posts/engineering-principles/</guid><description>&lt;h2 id="principles"&gt;
+ Principles
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Ship small, ship often.&lt;/li&gt;
+&lt;li&gt;Prefer boring tech for critical paths.&lt;/li&gt;
+&lt;li&gt;Tests document intent; keep them readable.&lt;/li&gt;
+&lt;li&gt;Make rollback easy before adding features.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="notes"&gt;
+ Notes
+&lt;/h2&gt;
+&lt;p&gt;These principles are intentionally concise so they can be memorized and debated.&lt;/p&gt;</description></item><item><title>Demo Feature Walkthrough</title><link>https://example.org/posts/product-walkthrough/</link><pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate><guid>https://example.org/posts/product-walkthrough/</guid><description>&lt;h2 id="why-this-article-exists"&gt;
+ Why this article exists
+&lt;/h2&gt;
+&lt;p&gt;This demo post now tracks what should be verified after updating to a newer theme release.&lt;/p&gt;
+&lt;h2 id="verification-flow"&gt;
+ Verification flow
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Confirm multilingual pages can be reached from the language switcher.&lt;/li&gt;
+&lt;li&gt;Confirm listing pages support search and tag filtering.&lt;/li&gt;
+&lt;li&gt;Confirm shortcodes on content (&lt;code&gt;toc&lt;/code&gt;, &lt;code&gt;tags&lt;/code&gt;, &lt;code&gt;recent-posts&lt;/code&gt;) render correctly.&lt;/li&gt;
+&lt;li&gt;Confirm interactive features: copy/soft-wrap on code blocks, Mermaid, KaTeX, and PhotoSwipe.&lt;/li&gt;
+&lt;li&gt;Confirm three-way theme toggle works: Light (sun) → Dark (moon) → Retro (gamepad) → Light. Retro mode should show NES pixel styling with deep-blue background and pixel font headings.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="expected-config"&gt;
+ Expected config
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;params.mainSections&lt;/code&gt; includes your publishing section (demo uses &lt;code&gt;posts&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;outputs.home&lt;/code&gt; includes &lt;code&gt;JSON&lt;/code&gt; for search indexing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="optional-checks"&gt;
+ Optional checks
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;translationKey&lt;/code&gt; on related pages to keep language variants linked.&lt;/li&gt;
+&lt;li&gt;Keep tags concise; they power tag filtering in list views.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="reference"&gt;
+ Reference
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gohugo.io/content-management/multilingual/"&gt;https://gohugo.io/content-management/multilingual/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
