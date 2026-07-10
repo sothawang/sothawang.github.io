@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Personal Archive</title><link>https://sothawang.github.io/posts/</link><description>Recent content in Posts on Personal Archive</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://sothawang.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://sothawang.github.io/posts/adts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/adts/</guid><description>&lt;h1 id="collection-interface中常用的实现类"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Personal Archive</title><link>https://sothawang.github.io/posts/</link><description>Recent content in Posts on Personal Archive</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://sothawang.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>ADTs</title><link>https://sothawang.github.io/posts/adts/</link><pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/adts/</guid><description>&lt;h1 id="collection-interface中常用的实现类"&gt;
  Collection interface中常用的实现类
 &lt;/h1&gt;
 &lt;ol&gt;
@@ -1485,7 +1485,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;staff&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;of&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ol start="2"&gt;
 &lt;li&gt;使用Collection interface自带的toArray()方法可以实现List转换到Array。&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title/><link>https://sothawang.github.io/posts/interface-lambdas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/interface-lambdas/</guid><description>&lt;h1 id="interface"&gt;
+&lt;/ol&gt;</description></item><item><title>interface-lambdas</title><link>https://sothawang.github.io/posts/interface-lambdas/</link><pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/interface-lambdas/</guid><description>&lt;h1 id="interface"&gt;
  Interface
 &lt;/h1&gt;
 &lt;ol&gt;
@@ -2137,7 +2137,7 @@ Comparable接口被定义为Comparable&lt;T&gt;。&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;useComparator&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 在这里可以使用上面定义好的 stringComparator&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title/><link>https://sothawang.github.io/posts/oop1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/oop1/</guid><description>&lt;h1 id="record"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title>OOP1</title><link>https://sothawang.github.io/posts/oop1/</link><pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/oop1/</guid><description>&lt;h1 id="record"&gt;
  Record
 &lt;/h1&gt;
 &lt;ol&gt;
@@ -2460,7 +2460,7 @@ Comparable接口被定义为Comparable&lt;T&gt;。&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Printer printer = new Printer();
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; printer.print(text);
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title/><link>https://sothawang.github.io/posts/oop2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/oop2/</guid><description>&lt;h1 id="继承inheritance"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title>OOP2</title><link>https://sothawang.github.io/posts/oop2/</link><pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/oop2/</guid><description>&lt;h1 id="继承inheritance"&gt;
  继承(inheritance)
 &lt;/h1&gt;
 &lt;ol&gt;
