@@ -1,656 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Personal Archive</title><link>https://sothawang.github.io/</link><description>Recent content in Home on Personal Archive</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://sothawang.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://sothawang.github.io/posts/07_interface_lambdas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/07_interface_lambdas/</guid><description>&lt;h1 id="interface"&gt;
- Interface
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;interface意味着能做什么，也就是can-do。&lt;/li&gt;
-&lt;li&gt;所有在interface中的method都必须声明为public，如果不是那就是default，并且无法正确被重写因为default意思是访问权限只允许在同一个package内。&lt;/li&gt;
-&lt;li&gt;compareTo是一个abstract,任何实现了Comparable的类必须提供compareTo方法同时传入参数只能是Object，并且返回是int。在java5之后，
-Comparable接口被定义为Comparable&lt;T&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;Comparable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;compareTo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;other&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol start="4"&gt;
-&lt;li&gt;Arrays.sort()方法可以对object的array进行分类，从小到大，如果想对这个object的array使用这个sort方法那么这个object的类必须implement Comparable接口。
-如果Arrays.sort(Object[] o)只有一个数组内容,此时sort会强制把o转换为comparable类型，调用它的comparTo方法。如果是**Arrays.sort(T[] a, Comparator&amp;lt;? super T&amp;gt; c)**这种情况就不需要重写，sort方法会根据第二个参数的排序规则排序。&lt;/li&gt;
-&lt;li&gt;Interface可以拥有constant，当你写一个：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;这里VALUE会被定性为public static final，属于这个interface，同时不能再被修改了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;在JAVA8之后，你可以通过添加default关键字来让写出一个带有implementation的method，这个method可以被子类直接使用,可以被重写。&lt;/li&gt;
-&lt;li&gt;可以写static method，也就是直接使用&lt;strong&gt;接口名字.方法&lt;/strong&gt;。这个static method不能被重写。&lt;/li&gt;
-&lt;li&gt;也可以写private helper method去帮助接口内部的方法实现，不暴露给外部。&lt;/li&gt;
-&lt;li&gt;如果一个x.comparaTo(y) == 0,那么x.equals(y)必须是true。&lt;/li&gt;
-&lt;li&gt;如果Manager extends Employee, Employee implements Comparable&lt;Employee&gt;,那么实际上Manager implements Comparabale&lt;Emplyee&gt;而不是Comparable&lt;Manager&gt;.&lt;/li&gt;
-&lt;li&gt;如果subclass定义了不同的比较规则，那么禁止不同类之间比较。如果有相同的比较规则，那么就实现一个final compareTo方法在superclass。&lt;/li&gt;
-&lt;li&gt;如果一个class继承了一个superclass和一个interface，那么superclass的default method会被使用，interface的同名default method会被忽略。&lt;/li&gt;
-&lt;li&gt;如果一个class实现了两个interface，且两个interface有相同的method，那么class必须要重写这个方法，否则会发生compliation error。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="actionlistener-interface"&gt;
- ActionListener interface
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;当一个class implements这个接口的时候，必须在这个class实现一个actionPerformed方法用来显示当botton被按下的时候会发生什么。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;TimePrinter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;implements&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ActionListener&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;actionPerformed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ActionEvent&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;At the tone, the time is &amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Instant&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;ofEpochMilli&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getWhen&lt;/span&gt;&lt;span class="p"&gt;()));&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Toolkit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getDefaultToolkit&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="na"&gt;beep&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol start="2"&gt;
-&lt;li&gt;随后创建一个对象：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;listener&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;TimePrinter&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Timer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Timer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;listener&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;start&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h1 id="comparator-interface"&gt;
- Comparator interface
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;使用这个接口可以同时写两种不同的比较方法在一个compare方法里。比如：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 需求：按年龄升序排，如果年龄相同，按成绩降序排&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Comparator&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;complexComparator&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Comparator&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nd"&gt;@Override&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;compare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 规则 1: 年龄升序&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getAge&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getAge&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getAge&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getAge&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 负数在前（小的在前）&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 规则 2: 年龄相同时，成绩降序&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 注意：double比较建议用 Double.compare&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Double&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;compare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getScore&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getScore&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// s2和s1调换位置实现降序&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//下面是使用方法，第一个参数是想要比较的内容，第二个参数是规则。&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Collections&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;studentList&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;complexComparator&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;reflexivity（自反性）
-&lt;ul&gt;
-&lt;li&gt;如果两个object是equal的，那么comapre(x,y)必须返回0。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;如果compare(x,y)是positive,那么compare(y,x)必须是negative。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="cloneable-interface"&gt;
- Cloneable interface
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;这个接口称为标记接口，只有一个类在implements这个接口后才能表示拥有clone的能力，也就可以重写clone方法，并且一定要public方便在其他类中使用。&lt;/li&gt;
-&lt;li&gt;Objetc.clone()是protected，而protected的规则是子类只能在子类内部使用父类的protected方法。如果一个在一个Main类中，Employee类的对象使用clone方法是会产生compliation error。&lt;/li&gt;
-&lt;li&gt;重写的clone方法需要实现deep copy,也就是说先shallow copy，然后再copy内容来达到deep copy。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Employee&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;implements&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Cloneable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;hireDay&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nd"&gt;@Override&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Employee&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;clone&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;throws&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CloneNotSupportedException&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 1. 先执行默认的浅拷贝&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Employee&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cloned&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Employee&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;clone&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 2. 为了防止共享 Date 对象，需要手动克隆可变对象（实现深拷贝）&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// cloned.hireDay = (Date) hireDay.clone(); &lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cloned&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h1 id="lambda-expression"&gt;
- Lambda expression
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;lambda必须对应一个functional interface which means it has one abstract method，但可以有多个default和static方法。&lt;/li&gt;
-&lt;li&gt;必须满足三个一致：参数数量一致；参数类型一致；返回类型一致。&lt;/li&gt;
-&lt;li&gt;如果lambda表达式的方法没有参数，比如roll()，那么仍然需要一个空号“()”，比如：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="n"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;random&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;6&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol start="4"&gt;
-&lt;li&gt;如果只有一个parameter且这个parameter可以被左边的进行推断，那么这个parameter可以不需要写类型，因为complier可以从左边的内容推断。&lt;/li&gt;
-&lt;li&gt;在lambda expression右边你不需要加上大括号，如果你加上大括号你就需要加上return，如果没有大括号就不能用return。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//不加大括号的&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;2&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//加大括号的&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol start="6"&gt;
-&lt;li&gt;一个functional interface中的abstract method和java.lang.Objects类中的方法名字一样，那么这些方法不会被计入functional interface的abstract method。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nd"&gt;@FunctionalInterface&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;MyInterface&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 真正的抽象方法（计数 +1）&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 以下方法虽然是抽象的，但覆盖了 Object 的方法（计数 +0）&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;equals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;hashCode&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol start="7"&gt;
-&lt;li&gt;lambda expression可以访问的四种变量
-&lt;ul&gt;
-&lt;li&gt;自己的参数 (its own parameters): 比如代码中的 x。&lt;/li&gt;
-&lt;li&gt;外层方法的局部变量 (local variables from the enclosing method): 比如代码中的 factor。&lt;/li&gt;
-&lt;li&gt;实例变量 (instance variables): 属于类的成员变量。&lt;/li&gt;
-&lt;li&gt;静态变量 (static variables): 属于类的静态成员。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;factor&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;multiply&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;factor&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol start="8"&gt;
-&lt;li&gt;在lambda expression内部，不能对local variable进行修改。因为local variable存储在stack中，当这个方法结束后，这个local variable将会消失；而lambda存储在heap中。&lt;/li&gt;
-&lt;li&gt;instance and static variable可以被修改因为这两个内容存储在heap中。&lt;/li&gt;
-&lt;li&gt;lambda的根据结果排序，右边规则的结果如果为负数，第一个参数永远排在前面，右边规则的结果如果为正数，第二个参数永远排在前面。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 当a-b为负数时，a排在b前面，当a-b为正数时，b排在a前面&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 当b-a为负数时，a排在前面，当b-a为正数时，b排在a前面&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 当a-b为负数时，b排在前面，当b-a为正数时，a排在b前面&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h1 id="functiont-r"&gt;
- Function&amp;lt;T, R&amp;gt;
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;R apply(T t)，这个apply方法的目的是激活的作用，如果我们有一个lambda对象是add，那么通过add.apply(x)来激活add对象。&lt;/li&gt;
-&lt;li&gt;default andThen(), default compose()。这里addThen()方法的作用是承接两个lambda对象的具体实现。&lt;/li&gt;
-&lt;li&gt;static identity()&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="bifunctiontur"&gt;
- BiFunction&amp;lt;T,U,R&amp;gt;
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;R apply(T t, U u)&lt;/li&gt;
-&lt;li&gt;default andThen(Function)&lt;/li&gt;
-&lt;li&gt;static minBy(Comparator), static maxBy(Comparator)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="predicatortr测试内容返回true-or-false"&gt;
- Predicator&amp;lt;T,R&amp;gt;(测试内容，返回true or false)
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;boolean test(T t)&lt;/li&gt;
-&lt;li&gt;default and(Predicate), default or(Predicate), default negate()&lt;/li&gt;
-&lt;li&gt;static not(Predicate), static isEqual(Object)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="consumer传入一个参数但是不返回内容用来对数据进行操作"&gt;
- Consumer&lt;T&gt;传入一个参数但是不返回内容，用来对数据进行操作。
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;void accept(T t)&lt;/li&gt;
-&lt;li&gt;default andThen(Consumer)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="supply无传入参数返回一个内容"&gt;
- Supply&lt;T&gt;无传入参数，返回一个内容
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;T get()&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="unaryoperator传入参数的类型是什么返回参数的类型就必须是什么functiontt"&gt;
- UnaryOperator&lt;T&gt;传入参数的类型是什么，返回参数的类型就必须是什么。Function&amp;lt;T,T&amp;gt;
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;T apply(T t)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="binaryoperator跟unaryoperator类似不过是传入两个参数bifunctionttt"&gt;
- BinaryOperator&lt;T&gt;跟UnaryOperator&lt;T&gt;类似，不过是传入两个参数。BiFunction&amp;lt;T,T,T&amp;gt;
-&lt;/h1&gt;
-&lt;h1 id="method-reference"&gt;
- Method reference
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;有三种写法：
-&lt;ul&gt;
-&lt;li&gt;ClassName::staticMethod&lt;/li&gt;
-&lt;li&gt;ClassName::instanceMethod&lt;/li&gt;
-&lt;li&gt;objectReference::instanceMethod&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="inner-class"&gt;
- Inner class
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;内部类可以访问outer class的field和local variable（必须是不可变的），这个outer class是相对于这个inner class的外一层的class。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="anonymous-inner-class"&gt;
- Anonymous inner class
-&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;anonymous inner class不需要class名字，用来简化代码量。这里的ActionListerner是一个接口，创建了一个实现该接口的匿名子类实例。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyTimerClass&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 这是一个成员方法&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;start&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;interval&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;beep&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 1. 定义匿名内部类（并立刻实例化）&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ActionListener&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;listener&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ActionListener&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nd"&gt;@Override&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;actionPerformed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ActionEvent&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Time is &amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Instant&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;ofEpochMilli&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getWhen&lt;/span&gt;&lt;span class="p"&gt;()));&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;beep&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Toolkit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getDefaultToolkit&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="na"&gt;beep&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 2. 使用这个实例&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Timer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;timer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Timer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;interval&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;listener&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;timer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;start&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol start="2"&gt;
-&lt;li&gt;可以被定义在方法内部也可以在类内部作为一个field提供给这个类中其他方法进行使用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codeblock"&gt;
- &lt;div class="codeblock-actions"&gt;
- &lt;button type="button"
- class="codeblock-action codeblock-action--wrap"
- data-wrap-toggle
- data-icon-button
- aria-pressed="false"
- title="Enable soft wrap"
- data-wrap-title="Enable soft wrap"
- data-nowrap-title="Disable soft wrap"&gt;
- &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
- &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
-
- &lt;button type="button"
- class="codeblock-action codeblock-action--copy"
- data-copy-code
- data-icon-button
- title="Copy code"
- data-copied-title="COPIED"&gt;
- &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
- &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
- &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;/button&gt;
- &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyClass&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 这是一个在类内部、方法外部定义的匿名内部类&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 它本质上是一个“成员变量”&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Comparator&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stringComparator&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Comparator&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nd"&gt;@Override&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;compare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;length&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;length&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;useComparator&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 在这里可以使用上面定义好的 stringComparator&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title/><link>https://sothawang.github.io/posts/adts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/adts/</guid><description>&lt;h1 id="collection-interface中常用的实现类"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Personal Archive</title><link>https://sothawang.github.io/</link><description>Recent content in Home on Personal Archive</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://sothawang.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://sothawang.github.io/posts/adts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/adts/</guid><description>&lt;h1 id="collection-interface中常用的实现类"&gt;
  Collection interface中常用的实现类
 &lt;/h1&gt;
 &lt;ol&gt;
@@ -2137,7 +1485,659 @@ Comparable接口被定义为Comparable&lt;T&gt;。&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;staff&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;of&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ol start="2"&gt;
 &lt;li&gt;使用Collection interface自带的toArray()方法可以实现List转换到Array。&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title/><link>https://sothawang.github.io/posts/oop1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/oop1/</guid><description>&lt;h1 id="record"&gt;
+&lt;/ol&gt;</description></item><item><title/><link>https://sothawang.github.io/posts/interface-lambdas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/interface-lambdas/</guid><description>&lt;h1 id="interface"&gt;
+ Interface
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;interface意味着能做什么，也就是can-do。&lt;/li&gt;
+&lt;li&gt;所有在interface中的method都必须声明为public，如果不是那就是default，并且无法正确被重写因为default意思是访问权限只允许在同一个package内。&lt;/li&gt;
+&lt;li&gt;compareTo是一个abstract,任何实现了Comparable的类必须提供compareTo方法同时传入参数只能是Object，并且返回是int。在java5之后，
+Comparable接口被定义为Comparable&lt;T&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;Comparable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;compareTo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;other&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol start="4"&gt;
+&lt;li&gt;Arrays.sort()方法可以对object的array进行分类，从小到大，如果想对这个object的array使用这个sort方法那么这个object的类必须implement Comparable接口。
+如果Arrays.sort(Object[] o)只有一个数组内容,此时sort会强制把o转换为comparable类型，调用它的comparTo方法。如果是**Arrays.sort(T[] a, Comparator&amp;lt;? super T&amp;gt; c)**这种情况就不需要重写，sort方法会根据第二个参数的排序规则排序。&lt;/li&gt;
+&lt;li&gt;Interface可以拥有constant，当你写一个：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;这里VALUE会被定性为public static final，属于这个interface，同时不能再被修改了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;在JAVA8之后，你可以通过添加default关键字来让写出一个带有implementation的method，这个method可以被子类直接使用,可以被重写。&lt;/li&gt;
+&lt;li&gt;可以写static method，也就是直接使用&lt;strong&gt;接口名字.方法&lt;/strong&gt;。这个static method不能被重写。&lt;/li&gt;
+&lt;li&gt;也可以写private helper method去帮助接口内部的方法实现，不暴露给外部。&lt;/li&gt;
+&lt;li&gt;如果一个x.comparaTo(y) == 0,那么x.equals(y)必须是true。&lt;/li&gt;
+&lt;li&gt;如果Manager extends Employee, Employee implements Comparable&lt;Employee&gt;,那么实际上Manager implements Comparabale&lt;Emplyee&gt;而不是Comparable&lt;Manager&gt;.&lt;/li&gt;
+&lt;li&gt;如果subclass定义了不同的比较规则，那么禁止不同类之间比较。如果有相同的比较规则，那么就实现一个final compareTo方法在superclass。&lt;/li&gt;
+&lt;li&gt;如果一个class继承了一个superclass和一个interface，那么superclass的default method会被使用，interface的同名default method会被忽略。&lt;/li&gt;
+&lt;li&gt;如果一个class实现了两个interface，且两个interface有相同的method，那么class必须要重写这个方法，否则会发生compliation error。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="actionlistener-interface"&gt;
+ ActionListener interface
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;当一个class implements这个接口的时候，必须在这个class实现一个actionPerformed方法用来显示当botton被按下的时候会发生什么。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;TimePrinter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;implements&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ActionListener&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;actionPerformed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ActionEvent&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;At the tone, the time is &amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Instant&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;ofEpochMilli&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getWhen&lt;/span&gt;&lt;span class="p"&gt;()));&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Toolkit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getDefaultToolkit&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="na"&gt;beep&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;随后创建一个对象：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;listener&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;TimePrinter&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Timer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Timer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;listener&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;start&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id="comparator-interface"&gt;
+ Comparator interface
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;使用这个接口可以同时写两种不同的比较方法在一个compare方法里。比如：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 需求：按年龄升序排，如果年龄相同，按成绩降序排&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Comparator&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;complexComparator&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Comparator&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nd"&gt;@Override&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;compare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 规则 1: 年龄升序&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getAge&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getAge&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getAge&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getAge&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 负数在前（小的在前）&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 规则 2: 年龄相同时，成绩降序&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 注意：double比较建议用 Double.compare&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Double&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;compare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getScore&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getScore&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// s2和s1调换位置实现降序&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//下面是使用方法，第一个参数是想要比较的内容，第二个参数是规则。&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Collections&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;studentList&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;complexComparator&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;reflexivity（自反性）
+&lt;ul&gt;
+&lt;li&gt;如果两个object是equal的，那么comapre(x,y)必须返回0。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如果compare(x,y)是positive,那么compare(y,x)必须是negative。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="cloneable-interface"&gt;
+ Cloneable interface
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;这个接口称为标记接口，只有一个类在implements这个接口后才能表示拥有clone的能力，也就可以重写clone方法，并且一定要public方便在其他类中使用。&lt;/li&gt;
+&lt;li&gt;Objetc.clone()是protected，而protected的规则是子类只能在子类内部使用父类的protected方法。如果一个在一个Main类中，Employee类的对象使用clone方法是会产生compliation error。&lt;/li&gt;
+&lt;li&gt;重写的clone方法需要实现deep copy,也就是说先shallow copy，然后再copy内容来达到deep copy。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Employee&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;implements&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Cloneable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;hireDay&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nd"&gt;@Override&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Employee&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;clone&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;throws&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CloneNotSupportedException&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 1. 先执行默认的浅拷贝&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Employee&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cloned&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Employee&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;clone&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 2. 为了防止共享 Date 对象，需要手动克隆可变对象（实现深拷贝）&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// cloned.hireDay = (Date) hireDay.clone(); &lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cloned&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id="lambda-expression"&gt;
+ Lambda expression
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;lambda必须对应一个functional interface which means it has one abstract method，但可以有多个default和static方法。&lt;/li&gt;
+&lt;li&gt;必须满足三个一致：参数数量一致；参数类型一致；返回类型一致。&lt;/li&gt;
+&lt;li&gt;如果lambda表达式的方法没有参数，比如roll()，那么仍然需要一个空号“()”，比如：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="n"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;random&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;6&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol start="4"&gt;
+&lt;li&gt;如果只有一个parameter且这个parameter可以被左边的进行推断，那么这个parameter可以不需要写类型，因为complier可以从左边的内容推断。&lt;/li&gt;
+&lt;li&gt;在lambda expression右边你不需要加上大括号，如果你加上大括号你就需要加上return，如果没有大括号就不能用return。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//不加大括号的&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;2&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//加大括号的&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol start="6"&gt;
+&lt;li&gt;一个functional interface中的abstract method和java.lang.Objects类中的方法名字一样，那么这些方法不会被计入functional interface的abstract method。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nd"&gt;@FunctionalInterface&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;MyInterface&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 真正的抽象方法（计数 +1）&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 以下方法虽然是抽象的，但覆盖了 Object 的方法（计数 +0）&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;equals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;hashCode&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol start="7"&gt;
+&lt;li&gt;lambda expression可以访问的四种变量
+&lt;ul&gt;
+&lt;li&gt;自己的参数 (its own parameters): 比如代码中的 x。&lt;/li&gt;
+&lt;li&gt;外层方法的局部变量 (local variables from the enclosing method): 比如代码中的 factor。&lt;/li&gt;
+&lt;li&gt;实例变量 (instance variables): 属于类的成员变量。&lt;/li&gt;
+&lt;li&gt;静态变量 (static variables): 属于类的静态成员。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;factor&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;multiply&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;factor&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol start="8"&gt;
+&lt;li&gt;在lambda expression内部，不能对local variable进行修改。因为local variable存储在stack中，当这个方法结束后，这个local variable将会消失；而lambda存储在heap中。&lt;/li&gt;
+&lt;li&gt;instance and static variable可以被修改因为这两个内容存储在heap中。&lt;/li&gt;
+&lt;li&gt;lambda的根据结果排序，右边规则的结果如果为负数，第一个参数永远排在前面，右边规则的结果如果为正数，第二个参数永远排在前面。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 当a-b为负数时，a排在b前面，当a-b为正数时，b排在a前面&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 当b-a为负数时，a排在前面，当b-a为正数时，b排在a前面&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// 当a-b为负数时，b排在前面，当b-a为正数时，a排在b前面&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id="functiont-r"&gt;
+ Function&amp;lt;T, R&amp;gt;
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;R apply(T t)，这个apply方法的目的是激活的作用，如果我们有一个lambda对象是add，那么通过add.apply(x)来激活add对象。&lt;/li&gt;
+&lt;li&gt;default andThen(), default compose()。这里addThen()方法的作用是承接两个lambda对象的具体实现。&lt;/li&gt;
+&lt;li&gt;static identity()&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="bifunctiontur"&gt;
+ BiFunction&amp;lt;T,U,R&amp;gt;
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;R apply(T t, U u)&lt;/li&gt;
+&lt;li&gt;default andThen(Function)&lt;/li&gt;
+&lt;li&gt;static minBy(Comparator), static maxBy(Comparator)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="predicatortr测试内容返回true-or-false"&gt;
+ Predicator&amp;lt;T,R&amp;gt;(测试内容，返回true or false)
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;boolean test(T t)&lt;/li&gt;
+&lt;li&gt;default and(Predicate), default or(Predicate), default negate()&lt;/li&gt;
+&lt;li&gt;static not(Predicate), static isEqual(Object)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="consumer传入一个参数但是不返回内容用来对数据进行操作"&gt;
+ Consumer&lt;T&gt;传入一个参数但是不返回内容，用来对数据进行操作。
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;void accept(T t)&lt;/li&gt;
+&lt;li&gt;default andThen(Consumer)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="supply无传入参数返回一个内容"&gt;
+ Supply&lt;T&gt;无传入参数，返回一个内容
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;T get()&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="unaryoperator传入参数的类型是什么返回参数的类型就必须是什么functiontt"&gt;
+ UnaryOperator&lt;T&gt;传入参数的类型是什么，返回参数的类型就必须是什么。Function&amp;lt;T,T&amp;gt;
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;T apply(T t)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="binaryoperator跟unaryoperator类似不过是传入两个参数bifunctionttt"&gt;
+ BinaryOperator&lt;T&gt;跟UnaryOperator&lt;T&gt;类似，不过是传入两个参数。BiFunction&amp;lt;T,T,T&amp;gt;
+&lt;/h1&gt;
+&lt;h1 id="method-reference"&gt;
+ Method reference
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;有三种写法：
+&lt;ul&gt;
+&lt;li&gt;ClassName::staticMethod&lt;/li&gt;
+&lt;li&gt;ClassName::instanceMethod&lt;/li&gt;
+&lt;li&gt;objectReference::instanceMethod&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="inner-class"&gt;
+ Inner class
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;内部类可以访问outer class的field和local variable（必须是不可变的），这个outer class是相对于这个inner class的外一层的class。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="anonymous-inner-class"&gt;
+ Anonymous inner class
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;anonymous inner class不需要class名字，用来简化代码量。这里的ActionListerner是一个接口，创建了一个实现该接口的匿名子类实例。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyTimerClass&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 这是一个成员方法&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;start&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;interval&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;beep&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 1. 定义匿名内部类（并立刻实例化）&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ActionListener&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;listener&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ActionListener&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nd"&gt;@Override&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;actionPerformed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ActionEvent&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Time is &amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Instant&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;ofEpochMilli&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getWhen&lt;/span&gt;&lt;span class="p"&gt;()));&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;beep&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Toolkit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getDefaultToolkit&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="na"&gt;beep&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 2. 使用这个实例&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Timer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;timer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Timer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;interval&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;listener&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;timer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;start&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;可以被定义在方法内部也可以在类内部作为一个field提供给这个类中其他方法进行使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codeblock"&gt;
+ &lt;div class="codeblock-actions"&gt;
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--wrap"
+ data-wrap-toggle
+ data-icon-button
+ aria-pressed="false"
+ title="Enable soft wrap"
+ data-wrap-title="Enable soft wrap"
+ data-nowrap-title="Disable soft wrap"&gt;
+ &lt;svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M4 6h16M4 10h12a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/&gt;
+ &lt;path d="M14 18l-2-2m2 2l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+
+ &lt;button type="button"
+ class="codeblock-action codeblock-action--copy"
+ data-copy-code
+ data-icon-button
+ title="Copy code"
+ data-copied-title="COPIED"&gt;
+ &lt;svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"&gt;&lt;/rect&gt;
+ &lt;path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true" focusable="false"&gt;
+ &lt;path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyClass&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 这是一个在类内部、方法外部定义的匿名内部类&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 它本质上是一个“成员变量”&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Comparator&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stringComparator&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Comparator&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nd"&gt;@Override&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;compare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;length&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;length&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;useComparator&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// 在这里可以使用上面定义好的 stringComparator&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title/><link>https://sothawang.github.io/posts/oop1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/oop1/</guid><description>&lt;h1 id="record"&gt;
  Record
 &lt;/h1&gt;
 &lt;ol&gt;
