@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on My New Hugo Site</title><link>https://example.org/posts/</link><description>Recent content in Posts on My New Hugo Site</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Theme Guide</title><link>https://example.org/posts/quick-start/</link><pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/quick-start/</guid><description>&lt;p&gt;This post walks through what &lt;strong&gt;hugo-trainsh&lt;/strong&gt; can render — headings, code, tables, diagrams, math, images, and more.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on My New Hugo Site</title><link>https://sothawang.github.io/posts/</link><description>Recent content in Posts on My New Hugo Site</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 26 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sothawang.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Theme Guide</title><link>https://sothawang.github.io/posts/quick-start/</link><pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/quick-start/</guid><description>&lt;p&gt;This post walks through what &lt;strong&gt;hugo-trainsh&lt;/strong&gt; can render — headings, code, tables, diagrams, math, images, and more.&lt;/p&gt;
 &lt;div class="toc"&gt;
  &lt;ul&gt;&lt;li&gt;
  &lt;a href="#three-theme-modes"&gt;Three Theme Modes&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
@@ -25,7 +25,7 @@
 &lt;h2 id="writing"&gt;
  Writing
 &lt;/h2&gt;
-&lt;p&gt;Regular Markdown works as expected. &lt;strong&gt;Bold text&lt;/strong&gt; stands out in gold under retro mode, and &lt;em&gt;italic text&lt;/em&gt; stays readable. You can link to &lt;a href=""&gt;any page&lt;/a&gt; and the style adapts per theme.&lt;/p&gt;</description></item><item><title>Code Samples</title><link>https://example.org/posts/code-samples/</link><pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/code-samples/</guid><description>&lt;h2 id="javascript"&gt;
+&lt;p&gt;Regular Markdown works as expected. &lt;strong&gt;Bold text&lt;/strong&gt; stands out in gold under retro mode, and &lt;em&gt;italic text&lt;/em&gt; stays readable. You can link to &lt;a href=""&gt;any page&lt;/a&gt; and the style adapts per theme.&lt;/p&gt;</description></item><item><title>Code Samples</title><link>https://sothawang.github.io/posts/code-samples/</link><pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/code-samples/</guid><description>&lt;h2 id="javascript"&gt;
  JavaScript
 &lt;/h2&gt;
 &lt;div class="codeblock"&gt;
@@ -106,7 +106,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;features&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;codeblock-enhanced&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;search&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;tag-filter&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;i18n&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;DemoFeature&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;feature&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;enabled&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;feature&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isoformat&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;total=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title>Images and Lightbox</title><link>https://example.org/posts/images-and-lightbox/</link><pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/images-and-lightbox/</guid><description>&lt;h2 id="external-image"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isoformat&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;total=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title>Images and Lightbox</title><link>https://sothawang.github.io/posts/images-and-lightbox/</link><pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/images-and-lightbox/</guid><description>&lt;h2 id="external-image"&gt;
  External image
 &lt;/h2&gt;
 &lt;p&gt;Click the image to open in a lightbox.&lt;/p&gt;
@@ -121,7 +121,7 @@
 &lt;h2 id="local-image-note"&gt;
  Local image note
 &lt;/h2&gt;
-&lt;p&gt;For page bundles, put images beside &lt;code&gt;index.md&lt;/code&gt; and reference by filename only to get dimensions.&lt;/p&gt;</description></item><item><title>Mermaid and Math Demo</title><link>https://example.org/posts/mermaid-and-math/</link><pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/mermaid-and-math/</guid><description>&lt;h2 id="mermaid"&gt;
+&lt;p&gt;For page bundles, put images beside &lt;code&gt;index.md&lt;/code&gt; and reference by filename only to get dimensions.&lt;/p&gt;</description></item><item><title>Mermaid and Math Demo</title><link>https://sothawang.github.io/posts/mermaid-and-math/</link><pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/mermaid-and-math/</guid><description>&lt;h2 id="mermaid"&gt;
  Mermaid
 &lt;/h2&gt;
 &lt;pre class="mermaid"&gt;
@@ -150,14 +150,14 @@ c5.3,-9.3,12,-14,20,-14
 H400000v40H845.2724
 s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
 c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
-M834 80h400000v40h-400000z"/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-s"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.1908em;"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;</description></item><item><title>Archive and Tags</title><link>https://example.org/posts/archive-and-tags/</link><pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/archive-and-tags/</guid><description>&lt;h2 id="archive"&gt;
+M834 80h400000v40h-400000z"/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-s"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class="vlist-r"&gt;&lt;span class="vlist" style="height:0.1908em;"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;</description></item><item><title>Archive and Tags</title><link>https://sothawang.github.io/posts/archive-and-tags/</link><pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/archive-and-tags/</guid><description>&lt;h2 id="archive"&gt;
  Archive
 &lt;/h2&gt;
 &lt;p&gt;Use the archive page to browse by date. Recent posts appear on the home page.&lt;/p&gt;
 &lt;h2 id="tags"&gt;
  Tags
 &lt;/h2&gt;
-&lt;p&gt;This post is tagged with &lt;code&gt;archive&lt;/code&gt; and &lt;code&gt;tags&lt;/code&gt;. Explore tag pages from the menu.&lt;/p&gt;</description></item><item><title>Table Test</title><link>https://example.org/posts/table-test/</link><pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate><guid>https://example.org/posts/table-test/</guid><description>&lt;table class="striped" data-test="t1" id="demo-table"&gt;
+&lt;p&gt;This post is tagged with &lt;code&gt;archive&lt;/code&gt; and &lt;code&gt;tags&lt;/code&gt;. Explore tag pages from the menu.&lt;/p&gt;</description></item><item><title>Table Test</title><link>https://sothawang.github.io/posts/table-test/</link><pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/table-test/</guid><description>&lt;table class="striped" data-test="t1" id="demo-table"&gt;
 	&lt;thead&gt;
 			&lt;tr&gt;
 					&lt;th style="text-align: left"&gt;Left&lt;/th&gt;
@@ -177,7 +177,7 @@ M834 80h400000v40h-400000z"/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&
 					&lt;td style="text-align: right"&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>Engineering Principles 2024</title><link>https://example.org/posts/engineering-principles/</link><pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate><guid>https://example.org/posts/engineering-principles/</guid><description>&lt;h2 id="principles"&gt;
+&lt;/table&gt;</description></item><item><title>Engineering Principles 2024</title><link>https://sothawang.github.io/posts/engineering-principles/</link><pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/engineering-principles/</guid><description>&lt;h2 id="principles"&gt;
  Principles
 &lt;/h2&gt;
 &lt;ol&gt;
@@ -189,7 +189,7 @@ M834 80h400000v40h-400000z"/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&
 &lt;h2 id="notes"&gt;
  Notes
 &lt;/h2&gt;
-&lt;p&gt;These principles are intentionally concise so they can be memorized and debated.&lt;/p&gt;</description></item><item><title>Demo Feature Walkthrough</title><link>https://example.org/posts/product-walkthrough/</link><pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate><guid>https://example.org/posts/product-walkthrough/</guid><description>&lt;h2 id="why-this-article-exists"&gt;
+&lt;p&gt;These principles are intentionally concise so they can be memorized and debated.&lt;/p&gt;</description></item><item><title>Demo Feature Walkthrough</title><link>https://sothawang.github.io/posts/product-walkthrough/</link><pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate><guid>https://sothawang.github.io/posts/product-walkthrough/</guid><description>&lt;h2 id="why-this-article-exists"&gt;
  Why this article exists
 &lt;/h2&gt;
 &lt;p&gt;This demo post now tracks what should be verified after updating to a newer theme release.&lt;/p&gt;
